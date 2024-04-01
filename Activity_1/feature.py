@@ -1,7 +1,8 @@
 import numpy as np
 
-def relu(x):
-   return np.maximum(0, x)
+def relu(y):
+   # Correcting the ReLU implementation to handle negative values properly
+   return np.maximum(0, y)
 
 def leaky_relu(x, alpha=0.01):
    return np.where(np.array(x) > 0, x, alpha*x)
